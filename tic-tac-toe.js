@@ -5,7 +5,7 @@ const resultTextElem = document.querySelector('.resultText');
 const playAgainBtnElem = document.querySelector('.playAgainBtn');
 const playerOneScrElem = document.querySelector('.playerOneScr');
 const playerTwoScrElem = document.querySelector('.playerTwoScr');
-let currentSymbol = 'o';
+let currentSymbol = '';
 let playerOneScore = 0;
 let playerTwoScore = 0;
 let result = '';
@@ -26,6 +26,7 @@ resetElem.addEventListener('click', () => {
 playAgainBtnElem.addEventListener('click', restart);
 
 function play(){
+  currentSymbol = 'o';
   boxElems.forEach(element => {
     element.addEventListener('click', addSymbol, {once:true});
   });
